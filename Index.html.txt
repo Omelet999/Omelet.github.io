@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Omelet 音乐作品集</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+        body {
+            background-color: #0f0f11;
+            color: #f0f0f0;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            line-height: 1.6;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+            border-bottom: 1px solid #27272a;
+            padding-bottom: 30px;
+        }
+        h1 {
+            font-size: 42px;
+            margin-bottom: 12px;
+            color: #ffffff;
+        }
+        .subtitle {
+            color: #a1a1aa;
+            font-size: 18px;
+            max-width: 600px;
+            margin: 0 auto 24px;
+        }
+        .btn-group a {
+            display: inline-block;
+            padding: 12px 28px;
+            margin: 0 8px;
+            border-radius: 6px;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .btn-resume {
+            background: #3b82f6;
+            color: white;
+        }
+        .btn-contact {
+            border: 1px solid #3b82f6;
+            color: #3b82f6;
+        }
+        section {
+            margin-bottom: 70px;
+        }
+        h2 {
+            font-size: 26px;
+            margin-bottom: 30px;
+            border-left: 4px solid #3b82f6;
+            padding-left: 14px;
+        }
+        /* 作品卡片样式 */
+        .works-list {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+            gap: 24px;
+        }
+        .work-card {
+            background: #18181b;
+            border-radius: 10px;
+            padding: 22px;
+            transition: 0.2s ease;
+        }
+        .work-card:hover {
+            background: #202026;
+        }
+        .work-title {
+            font-size: 19px;
+            margin-bottom: 6px;
+        }
+        .work-tag {
+            color: #60a5fa;
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+        .work-desc {
+            color: #b4b4c2;
+            font-size: 14px;
+            margin-bottom: 16px;
+        }
+        audio {
+            width: 100%;
+        }
+        /* 技能栏 */
+        .skill-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+        .skill-tag {
+            background: #1e293b;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 14px;
+            color: #93c5fd;
+        }
+        /* 联系方式 */
+        .contact-text {
+            font-size: 17px;
+            color: #d4d4dc;
+        }
+        .contact-text a {
+            color: #3b82f6;
+            text-decoration: none;
+        }
+        footer {
+            text-align: center;
+            margin-top: 100px;
+            color: #71717a;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 头部主页 -->
+    <header>
+        <h1>Omelet | 音乐制作人 / 编曲混音师</h1>
+        <p class="subtitle">专注影视配乐、游戏BGM、人声混音；擅长管弦配器、氛围编曲，标准化响度制作适配商用交付。</p>
+        <div class="btn-group">
+            <a href="./resume.pdf" class="btn-resume">下载个人简历</a>
+            <a href="#contact" class="btn-contact">联系我</a>
+        </div>
+    </header>
+
+    <!-- 作品集区域 -->
+    <section id="works">
+        <h2>精选音乐作品</h2>
+        <div class="works-list">
+            <!-- 作品1 复制整块可新增更多曲目 -->
+            <div class="work-card">
+                <h3 class="work-title">《绿洲》氛围管弦配乐</h3>
+                <div class="work-tag">影视短片配乐 · 2026</div>
+                <p class="work-desc">使用Logic Pro + Spitfire管弦库，动态标准化至-14LUFS，以荒漠生机为核心创作基调。</p>
+                <audio controls src="./audio/oasis.mp3">
+            </div>
+            <!-- 作品2 -->
+            <div class="work-card">
+                <h3 class="work-title">城市叙事流行人声混音</h3>
+                <div class="work-tag">流行人声 · 混音工程</div>
+                <p class="work-desc">人声分层压缩、齿音消除，立体声宽声场处理，适配流媒体平台响度标准。</p>
+                <audio controls src="./audio/pop-vocal.mp3">
+            </div>
+            <!-- 作品3 -->
+            <div class="work-card">
+                <h3 class="work-title">像素游戏探索BGM</h3>
+                <div class="work-tag">游戏音频 · 循环配乐</div>
+                <p class="work-desc">循环分层设计，可无缝循环，适配独立RPG地图探索场景，配器钢琴+木管+轻电子。</p>
+                <audio controls src="./audio/game-bgm.mp3">
+            </div>
+        </div>
+    </section>
+
+    <!-- 技能介绍 -->
+    <section id="about">
+        <h2>专业技能</h2>
+        <div class="skill-wrap">
+            <span class="skill-tag">Logic Pro X</span>
+            <span class="skill-tag">Studio One</span>
+            <span class="skill-tag">管弦配器</span>
+            <span class="skill-tag">人声混音</span>
+            <span class="skill-tag">影视响度标准化</span>
+            <span class="skill-tag">游戏循环配乐</span>
+            <span class="skill-tag">Spitfire / Kontakt音源</span>
+            <span class="skill-tag">母带处理</span>
+        </div>
+        <br><br>
+        <h3>个人简介</h3>
+        <p style="color:#b4b4c2;max-width:800px;">专职音乐制作，拥有多首商用配乐、单曲混音案例；擅长氛围感长线配乐与人声精细化处理，熟悉短视频、游戏、短片各类场景音频交付规范。</p>
+    </section>
+
+    <!-- 联系方式 -->
+    <section id="contact">
+        <h2>联系方式</h2>
+        <div class="contact-text">
+            <p>商务邮箱：omelet-music@shturl.</p>
+            <p>网易云音乐：<a href="#">你的音乐人主页链接</a></p>
+            <p>SoundCloud：<a href="#">你的作品外链</a></p>
+        </div>
+    </section>
+
+    <footer>
+        © 2026 Omelet Music Portfolio All Rights Reserved
+    </footer>
+</body>
+</html>
