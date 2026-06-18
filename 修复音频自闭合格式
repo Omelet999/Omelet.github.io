@@ -143,10 +143,10 @@
         <div class="works-list">
             <!-- 作品1 复制整块可新增更多曲目 -->
             <div class="work-card">
-                <h3 class="work-title">《绿洲》氛围管弦配乐</h3>
+                <h3 class="work-title">《绿洲オアシス》民族管弦配乐</h3>
                 <div class="work-tag">影视短片配乐 · 2026</div>
                 <p class="work-desc">使用Logic Pro + Spitfire管弦库，动态标准化至-14LUFS，以荒漠生机为核心创作基调。</p>
-                <audio controls src="./audio/oasis.mp3">
+                <audio controls src="./audio/绿洲オアシス.wave" />
             </div>
             <!-- 作品2 -->
             <div class="work-card">
