@@ -124,6 +124,18 @@
             color: #71717a;
             font-size: 14px;
         }
+        /* 配乐封面样式 */
+        .work-cover {
+            width: 100%;
+            margin-bottom: 22px; /* 封面和标题之间的空隙 */
+        }
+        .work-cover img {
+            width: 100%;
+            height: auto;
+            border-radius: 12px; /* 图片圆角，和卡片风格统一 */
+            display: block;
+            object-fit: cover;
+        }
     </style>
 </head>
 <body>
@@ -143,6 +155,9 @@
         <div class="works-list">
             <!-- 作品1 复制整块可新增更多曲目 -->
             <div class="work-card">
+                <div class="work-cover">
+                <img src="./cover_oasis.png" alt="绿洲オアシス配乐封面">
+                </div>
                 <h3 class="work-title">《绿洲オアシス》民族管弦配乐</h3>
                 <div class="work-tag">影视短片配乐 · 2026</div>
                 <p class="work-desc">穿行于绵延砂路，抵达沙漠之中的一处边境绿洲；暂且停下前行的脚步，沉浸在这座异域小镇的市井烟火。</p>
