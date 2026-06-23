@@ -156,6 +156,8 @@
     </style>
 </head>
 <body>
+    <!-- 背景音乐放在最顶部，页面加载优先加载音频 -->
+  <audio src="./bgm.mp3" loop hidden preload="auto" muted id="bgAudio" />
     <!-- 头部主页 -->
     <header>
         <h1>Omelet | 音乐制作人 / 编曲混音师</h1>
@@ -164,6 +166,7 @@
         <div class="btn-group">
             <a href="./resume.pdf" class="btn-resume">下载个人简历</a>
             <a href="#contact" class="btn-contact">联系我</a>
+            <button class="btn-bgm" id="toggleBgm">播放背景音乐</button>
         </div>
     </header>
 
@@ -311,7 +314,22 @@ allAudio.forEach(audio => {
   });
 });
 </script>
+<!-- 新增：背景音乐开关控制脚本 -->
+<script>
+const bgAudio = document.getElementById('bgAudio');
+const toggleBtn = document.getElementById('toggleBgm');
 
+toggleBtn.addEventListener('click', () => {
+  if (bgAudio.muted || bgAudio.paused) {
+    bgAudio.muted = false;
+    bgAudio.play();
+    toggleBtn.innerText = '暂停背景音乐';
+  } else {
+    bgAudio.pause();
+    toggleBtn.innerText = '播放背景音乐';
+  }
+})；
+</script>
     
 </body>
 </html>
