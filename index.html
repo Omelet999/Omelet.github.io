@@ -22,74 +22,12 @@
             padding: 40px 20px;
             line-height: 1.6;
         }
-        /* 顶部Logo居中容器 */
-.site-top {
-  text-align: center;
-  margin-bottom: 40px;
-}
-/* 粗拙破损大字OMELET */
-.big-logo {
-  font-size: 120px;
-  font-weight: 900;
-  letter-spacing: 12px;
-  color: #ffffff;
-  margin: 20px 0;
-  font-family: Arial Black, sans-serif;
-  /* 撕裂破损边缘效果 */
-  clip-path: polygon(
-    0 2%, 100% 0, 99% 98%, 1% 100%,
-    3% 4%, 97% 2%, 98% 96%, 2% 99%
-  );
-}
-/* Mute sound静音按钮样式 */
-.mute-btn {
-  background: transparent;
-  border: 1px solid #fff;
-  color: white;
-  font-size: 28px;
-  display: flex;
-  align-items: center;
-  gap: 16px;
-  margin: 0 auto;
-  padding: 8px 24px;
-  cursor: pointer;
-}
-/* 按钮里||方框 */
-.pause-icon {
-  border: 1px solid #fff;
-  padding: 4px 16px;
-}
-/* 两个按钮容器排版 */
-.header-right-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 12px;
-  margin-bottom: 60px;
-  padding-bottom: 30px;
-  border-bottom: 1px solid #27272a;
-}
-/* 下载简历按钮样式 */
-.header-right-buttons .btn-resume {
-  background: #3b82f6;
-  border: none;
-  color: white;
-  padding: 10px 22px;
-  border-radius: 4px;
-  font-size: 14px;
-  cursor: pointer;
-  text-decoration: none;
-}
-/* 联系我按钮样式 */
-.header-right-buttons .btn-contact {
-  background: transparent;
-  border: 1px solid #3b82f6;
-  color: #3b82f6;
-  padding: 10px 22px;
-  border-radius: 4px;
-  font-size: 14px;
-  cursor: pointer;
-  text-decoration: none;
-}
+        header {
+            text-align: center;
+            margin-bottom: 60px;
+            border-bottom: 1px solid #27272a;
+            padding-bottom: 30px;
+        }
         h1 {
             font-size: 42px;
             margin-bottom: 12px;
@@ -219,26 +157,15 @@
 </head>
 <body>
     <!-- 头部主页 -->
-    <!-- 全新顶部大字Logo+静音按钮区域 -->
-<div class="site-top">
-  <h1 class="big-logo">OMELET</h1>
-  <button class="mute-btn">
-    <span class="pause-icon">||</span>
-    Mute sound
-  </button>
-</div>
-
-<!-- 下载简历、联系我按钮（保留你原有的跳转地址） -->
-<div class="header-right-buttons">
-  <a href="./resume.pdf" class="btn-resume">下载个人简历</a>
-  <a href="#contact" class="btn-contact">联系我</a>
-</div>
-
-<!-- 隐藏背景音乐播放器 -->
-<audio id="bgAudio" loop preload="auto">
-  <source src="bgm.mp3" type="audio/mpeg">
-
-
+    <header>
+        <h1>Omelet | 音乐制作人 / 编曲混音师</h1>
+        <p class="subtitle">专注影视、游戏配乐创作，擅长多层次管弦配器与氛围感叙事编曲；<br>
+                            精通管弦混音、声场空间设计、标准化响度母带处理，一站式完成商用音频全流程制作交付。</p>
+        <div class="btn-group">
+            <a href="./resume.pdf" class="btn-resume">下载个人简历</a>
+            <a href="#contact" class="btn-contact">联系我</a>
+        </div>
+    </header>
 
     <!-- 作品集区域 -->
     <section id="works">
@@ -367,33 +294,6 @@
     <footer>
         © 2026 Omelet Music Portfolio All Rights Reserved
     </footer>
-    <script>
-// 获取背景音乐和静音按钮
-const bgAudio = document.getElementById('bgAudio');
-const muteBtn = document.querySelector('.mute-btn');
-const pauseIcon = document.querySelector('.pause-icon');
-let isMuted = false;
-
-// 用户点击页面后自动循环播放BGM
-window.addEventListener('load', function(){
-  document.body.addEventListener('click', function autoPlayBGM(){
-    bgAudio.play();
-    document.body.removeEventListener('click', autoPlayBGM);
-  }, {once:true});
-});
-
-// 点击按钮切换静音/播放
-muteBtn.addEventListener('click', function(){
-  if(isMuted){
-    bgAudio.muted = false;
-    muteBtn.innerHTML = '<span class="pause-icon">||</span> Mute sound';
-  }else{
-    bgAudio.muted = true;
-    muteBtn.innerHTML = '<span class="pause-icon">▶</span> Unmute sound';
-  }
-  isMuted = !isMuted;
-})
-</script>
     <script>
 // 获取页面所有音频播放器
 const allAudio = document.querySelectorAll('audio');
