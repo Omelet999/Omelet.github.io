@@ -294,5 +294,24 @@
     <footer>
         © 2026 Omelet Music Portfolio All Rights Reserved
     </footer>
+    <script>
+// 获取页面所有音频播放器
+const allAudio = document.querySelectorAll('audio');
+// 给每个音频绑定播放事件
+allAudio.forEach(audio => {
+  audio.addEventListener('play', function () {
+    // 遍历所有播放器
+    allAudio.forEach(item => {
+      // 不是当前点击的播放器就暂停并归零进度
+      if (item !== audio) {
+        item.pause();
+        item.currentTime = 0;
+      }
+    });
+  });
+});
+</script>
+
+    
 </body>
 </html>
