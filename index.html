@@ -55,6 +55,23 @@
             border: 1px solid #3b82f6;
             color: #3b82f6;
         }
+        /* 背景音乐开关按钮样式 */
+        .btn-group button {
+            display: inline-block;
+            padding: 12px 28px;
+            margin: 0 8px;
+            border-radius: 6px;
+            font-weight: 500;
+            border: 1px solid #3b82f6;
+            color: #3b82f6;
+            background: transparent;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        .btn-group button:hover {
+            background-color: #3b82f6;
+            color: #ffffff;
+        }
         section {
             margin-bottom: 70px;
         }
@@ -192,7 +209,7 @@
                 <h3 class="work-title">《此间有余》</h3>
                 <div class="work-tag">影视配乐</div>
                 <p class="work-desc">身披一袭清幽，坐拥满山锦绣，任凭叶落纷纷，我自心中无痕。</p>
-                <audio controls src="./audio/cjyy.mp3">
+                <audio controls src="./audio/cjyy.mp3"/>
             </div>
             <!-- 作品3 -->
             <div class="work-card">
@@ -202,7 +219,7 @@
                 <h3 class="work-title">《炽》</h3>
                 <div class="work-tag">游戏配乐</div>
                 <p class="work-desc">万籁归“积”，一刻方“炽”。</p>
-                <audio controls src="./audio/chi.mp3">
+                <audio controls src="./audio/chi.mp3"/>
             </div>
             <!-- 作品4 -->
             <div class="work-card">
@@ -212,7 +229,7 @@
                 <h3 class="work-title">《小口袋里的远行》</h3>
                 <div class="work-tag">游戏配乐</div>
                 <p class="work-desc">不必跨越重洋，只需要穿过那片抹茶色的草甸。把晨露装进瓶子，把风声揣进兜里；这场在山谷缝隙中的小小远航，出发时连风铃都没有惊动。</p>
-                <audio controls src="./audio/xkd.mp3">
+                <audio controls src="./audio/xkd.mp3"/>
             </div>
             <!-- 作品5 -->
             <div class="work-card">
@@ -222,7 +239,7 @@
                 <h3 class="work-title">《UNREST》</h3>
                 <div class="work-tag">影视配乐</div>
                 <p class="work-desc">紧张压抑向战斗管弦配乐，诠释危机四伏的对峙与冲突感。</p>
-                <audio controls src="./audio/unrest.mp3">
+                <audio controls src="./audio/unrest.mp3"/>
             </div>
             <!-- 作品6 -->
             <div class="work-card">
@@ -232,7 +249,7 @@
                 <h3 class="work-title">《One More Step》</h3>
                 <div class="work-tag">影视配乐</div>
                 <p class="work-desc">前路漫漫，步履不停，One More Step。</p>
-                <audio controls src="./audio/oms.mp3">
+                <audio controls src="./audio/oms.mp3"/>
             </div>
             <!-- 作品7 -->
             <div class="work-card">
@@ -242,7 +259,7 @@
                 <h3 class="work-title">《KNIGHT》</h3>
                 <div class="work-tag">游戏配乐</div>
                 <p class="work-desc">以身化盾，独守孤城。 一半是喋血沙场的冷硬，一半是梦回故里的温存。</p>
-                <audio controls src="./audio/knight.mp3">
+                <audio controls src="./audio/knight.mp3"/>
             </div>
             <!-- 作品8 -->
             <div class="work-card">
@@ -252,7 +269,7 @@
                 <h3 class="work-title">《捉光去 Let's Catch Light》</h3>
                 <div class="work-tag">游戏配乐</div>
                 <p class="work-desc">叮！主线任务更新：捕获一只正在打瞌睡的光精灵 (0/1)</p>
-                <audio controls src="./audio/zgq.mp3">
+                <audio controls src="./audio/zgq.mp3"/>
             </div>
             <!-- 作品9 -->
             <div class="work-card">
@@ -262,8 +279,8 @@
                 <h3 class="work-title">《冬天的信号》</h3>
                 <div class="work-tag">游戏配乐</div>
                 <p class="work-desc">冬日没有喧嚣，只有一缕暖阳、一只狸花猫，和我写给冬天的信号。</p>
-                <audio controls src="./audio/dtdxh.mp3">
-        </div>
+                <audio controls src="./audio/dtdxh.mp3"/>
+            </div>
     </section>
 
     <!-- 技能介绍 -->
@@ -328,7 +345,7 @@ toggleBtn.addEventListener('click', () => {
     bgAudio.pause();
     toggleBtn.innerText = '播放背景音乐';
   }
-})；
+});
 </script>
     
 </body>
