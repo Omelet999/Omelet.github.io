@@ -332,15 +332,24 @@ allAudio.forEach(audio => {
   });
 });
 </script>
-<!-- 新增：背景音乐开关控制脚本 -->
+      <!-- 新增：背景音乐开关控制脚本 -->
 <script>
 const bgAudio = document.getElementById('bgAudio');
 const toggleBtn = document.getElementById('toggleBgm');
+const allAudio = document.querySelectorAll('audio');
 
 toggleBtn.addEventListener('click', () => {
+  // 点背景音乐时，暂停所有作品音频
+  allAudio.forEach(item => {
+    if(item.id !== "bgAudio"){
+      item.pause();
+      item.currentTime = 0;
+    }
+  })
   if (bgAudio.muted || bgAudio.paused) {
     bgAudio.muted = false;
-    bgAudio.play();
+    // 捕获浏览器播放报错，防止页面卡死黑屏
+    bgAudio.play().catch(err=>{});
     toggleBtn.innerText = '暂停背景音乐';
   } else {
     bgAudio.pause();
@@ -348,6 +357,7 @@ toggleBtn.addEventListener('click', () => {
   }
 });
 </script>
+
     
 </body>
 </html>
